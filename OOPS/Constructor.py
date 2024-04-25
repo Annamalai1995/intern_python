@@ -36,11 +36,11 @@ class Account:
     def getAccBal(self):return self.__accBal
 
 
-'''acc1=Account()
-acc1.setAccNum(87654567343)
-acc1.setAccBal(3400.5)
-acc1.setHolder("Kasthoori")
+acc1=Account()
+acc1.setAccNum(789456123)
+acc1.setAccBal(4500.5)
+acc1.setHolder("priya")
 print(acc1)
 
-acc2=Account("Mohamed",23432234323,9800.3)
-print(acc2.getAccBal())''' 
+acc2=Account("Gowthami",14578923,7800.5)
+print(acc2.getAccBal())
