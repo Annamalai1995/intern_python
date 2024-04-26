@@ -9,10 +9,10 @@ class Jaysurya(Stocks):
     def __init__(self,hey):
         self.products=array('i')
         self.products.extend(hey)
-    def search(self):
-        budget=int(input("Enter the price you wish to search:"))
-        for x in self.products:
-            if x<=budget:print(x)
+    # def search(self):
+    #     budget=int(input("Enter the price  search:"))
+    #     for x in self.products:
+    #         if x<=budget:print(x)
 class Reliance(Stocks):
     def __init__(self,hai):
         self.products = array('i')
@@ -20,11 +20,10 @@ class Reliance(Stocks):
     def getByPosition(self,start,stop):
         print(self.products[start:stop])
 
-j=Jaysurya([12000,4500,600,300,1000,500])
-r=Reliance([1400,5600,1200,500,300,400,1000,5000,8000,900,13000])
+j=Jaysurya([5000,300,800,780])
+r=Reliance([100,200,300,400,500,600,800,1000])
 
-j.search()
-r.getByPosition(0,2)
-
-j.show()
+#j.search()
+r.getByPosition(0,4)
 r.show()
+j.show()
