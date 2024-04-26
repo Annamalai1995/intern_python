@@ -9,19 +9,15 @@ class Account:
         self.__accNum=num
         self.__accBal=bal
 
-    #overloaing operator
-
-    # obj<<obj:accountObject<<deposite_value
-    def __lshift__(self, other):
+    def __add__(self, other):
         self.__accBal+=other
-        print(other,"credited to your account",self.__accNum)
-    # obj>>obj:accountObject>>debitValue
-    def __rshift__(self, other):
+        print(other,"credited ",self.__accNum)
+    def __sub__(self, other):
         if self.__accBal>=other:
             self.__accBal-=other
-            print(other,"debited from account",self.__accNum)
+            print(other,"debited ",self.__accNum)
         else:
-            print(self.__accNum,"has insufficient amount")
+            print(self.__accNum," insufficient balance")
 
 
     def __str__(self):
@@ -40,6 +36,8 @@ acc1=Account()
 acc1.setAccNum(789456123)
 acc1.setAccBal(4500.5)
 acc1.setHolder("priya")
+print(acc1)
+acc1+5000
 print(acc1)
 
 acc2=Account("Gowthami",14578923,7800.5)
